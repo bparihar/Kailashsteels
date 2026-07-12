@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kailash Steels — Stainless Steel Utensils, Hotelware &amp; Kitchenware Exporters</title>
+<meta name="description" content="Kailash Steels is a Mumbai-based importer and exporter of stainless steel utensils, hotelware, and kitchenware — serving distributors and hospitality buyers worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   KAILASH STEELS — stylesheet
+   Design language: export cargo manifest x brushed steel.
+   Palette: cool porcelain / graphite / brushed steel / silver accent
+   ============================================================ */
+
+:root{
+  --ink:        #14171A;
+  --ink-soft:   #383F44;
+  --porcelain:  #ECEEEC;
+  --porcelain-2:#DEE2E1;
+  --steel-100:  #F4F5F5;
+  --steel-300:  #C9CFD1;
+  --steel-500:  #8B959B;
+  --steel-700:  #4A5560;
+  --steel-900:  #262D33;
+  --silver:      #9CA8AD;
+  --silver-dark: #566067;
+  --line:       rgba(20,23,26,0.14);
+  --line-soft:  rgba(20,23,26,0.08);
+
+  --display: "Space Grotesk", "Archivo", sans-serif;
+  --body:    "Inter", -apple-system, sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, monospace;
+
+  --max: 1180px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--porcelain);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+.wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  margin:0 0 0.5em;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+  font-weight:600;
+}
+p{ margin:0 0 1em; color:var(--ink-soft); }
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:0.14em;
+  color:var(--silver-dark);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{
+  content:"";
+  width:22px; height:1px;
+  background:var(--silver);
+  display:inline-block;
+}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--silver-dark);
+  outline-offset:3px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+}
+
+/* ---------------- Header ---------------- */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(236,238,236,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 0;
+}
+.logo{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:-0.02em;
+  text-decoration:none;
+  display:flex; align-items:baseline; gap:8px;
+}
+.logo .mark{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:500;
+  color:#fff;
+  background:var(--steel-900);
+  padding:3px 6px;
+  border-radius:2px;
+  letter-spacing:0.04em;
+}
+.logo .name-2{ color:var(--silver-dark); }
+
+nav.main-nav{ display:flex; gap:32px; }
+nav.main-nav a{
+  text-decoration:none;
+  font-size:14.5px;
+  color:var(--ink-soft);
+  position:relative;
+  padding:4px 0;
+}
+nav.main-nav a.active,
+nav.main-nav a:hover{ color:var(--ink); }
+nav.main-nav a.active::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-2px;
+  height:2px; background:var(--silver);
+}
+.nav-toggle{ display:none; background:none; border:none; cursor:pointer; }
+.nav-toggle span{
+  display:block; width:24px; height:2px; background:var(--ink); margin:5px 0;
+}
+
+@media (max-width:860px){
+  nav.main-nav{
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--porcelain);
+    flex-direction:column; gap:0;
+    border-bottom:1px solid var(--line);
+    max-height:0; overflow:hidden;
+  }
+  nav.main-nav.open{ max-height:400px; }
+  nav.main-nav a{ padding:16px 28px; border-top:1px solid var(--line-soft); }
+  .nav-toggle{ display:block; }
+}
+
+/* ---------------- Buttons ---------------- */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--mono);
+  font-size:13px;
+  letter-spacing:0.03em;
+  text-decoration:none;
+  padding:13px 22px;
+  border-radius:2px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn-primary{ background:var(--ink); color:var(--porcelain); }
+.btn-primary:hover{ background:var(--steel-900); transform:translateY(-1px); }
+.btn-ghost{ border-color:var(--line); color:var(--ink); background:transparent; }
+.btn-ghost:hover{ border-color:var(--steel-700); }
+.btn-silver{ background:var(--silver-dark); color:#fff; }
+.btn-silver:hover{ background:var(--steel-900); transform:translateY(-1px); }
+
+/* ---------------- Hero: manifest header ---------------- */
+.hero{
+  border-bottom:1px solid var(--line);
+  padding:64px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:48px;
+  align-items:end;
+  padding-bottom:56px;
+}
+.hero h1{
+  font-size:clamp(38px, 5.4vw, 64px);
+  line-height:1.03;
+  max-width:14ch;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--silver);
+}
+.hero .lede{
+  font-size:17.5px;
+  max-width:46ch;
+  color:var(--ink-soft);
+  margin-bottom:28px;
+}
+.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+.manifest-card{
+  border:1px solid var(--line);
+  background:var(--steel-100);
+  font-family:var(--mono);
+  font-size:12.5px;
+}
+.manifest-card .m-head{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px 16px;
+  background:var(--ink);
+  color:var(--porcelain);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+}
+.manifest-row{
+  display:flex; justify-content:space-between;
+  padding:11px 16px;
+  border-top:1px dashed var(--line);
+}
+.manifest-row span:first-child{ color:var(--steel-700); }
+.manifest-row span:last-child{ color:var(--ink); font-weight:600; }
+
+.hero-strip{
+  border-top:1px solid var(--line);
+  overflow:hidden;
+  white-space:nowrap;
+  background:var(--steel-900);
+}
+.hero-strip .track{
+  display:inline-flex;
+  gap:56px;
+  padding:13px 0;
+  animation:ticker 32s linear infinite;
+}
+.hero-strip span{
+  font-family:var(--mono);
+  font-size:12.5px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--steel-300);
+}
+.hero-strip span b{ color:var(--porcelain); font-weight:600; }
+@keyframes ticker{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+@media (max-width:860px){
+  .hero-grid{ grid-template-columns:1fr; }
+}
+
+/* ---------------- Section scaffolding ---------------- */
+section{ padding:88px 0; }
+.section-tight{ padding:64px 0; }
+.section-head{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:24px; margin-bottom:44px; flex-wrap:wrap;
+}
+.section-head h2{ font-size:clamp(26px,3.4vw,36px); max-width:16ch; }
+.section-head .sub{ max-width:38ch; color:var(--ink-soft); font-size:15px; margin:0; }
+
+.bg-ink{ background:var(--ink); color:var(--porcelain); }
+.bg-ink p{ color:var(--steel-300); }
+.bg-ink h2, .bg-ink h3{ color:var(--porcelain); }
+.bg-steel{ background:var(--steel-100); }
+
+/* ---------------- Category / feature grid ---------------- */
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.cell{ background:var(--porcelain); padding:34px; }
+.bg-ink .cell{ background:var(--ink); }
+
+.cat-card{ display:flex; flex-direction:column; gap:14px; }
+.cat-card .icon{ width:44px; height:44px; color:var(--silver-dark); }
+.cat-card .code{ font-family:var(--mono); font-size:11.5px; color:var(--steel-500); letter-spacing:0.08em; }
+.cat-card h3{ font-size:19px; margin-bottom:4px; }
+.cat-card p{ font-size:14.5px; margin-bottom:10px; }
+.cat-card .tag-link{ font-family:var(--mono); font-size:12.5px; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--silver); align-self:flex-start; }
+
+@media (max-width:860px){
+  .grid-3, .grid-2{ grid-template-columns:1fr; }
+}
+
+/* ---------------- Spec / manifest tag (signature product card) ---------------- */
+.spec-tag{
+  border:1px solid var(--line);
+  background:var(--porcelain);
+  position:relative;
+  padding:0;
+  overflow:hidden;
+}
+.spec-tag .tag-top{
+  padding:22px 20px 16px;
+  border-bottom:1px dashed var(--line);
+  position:relative;
+}
+.spec-tag .tag-top::before,
+.spec-tag .tag-top::after{
+  content:"";
+  position:absolute; bottom:-6px;
+  width:11px; height:11px;
+  background:var(--steel-100);
+  border:1px solid var(--line);
+  border-radius:50%;
+}
+.spec-tag .tag-top::before{ left:-6px; }
+.spec-tag .tag-top::after{ right:-6px; }
+.spec-tag .icon{ width:40px; height:40px; color:var(--steel-700); margin-bottom:14px; }
+.spec-tag h3{ font-size:17px; margin-bottom:2px; }
+.spec-tag .desc{ font-size:13.5px; color:var(--ink-soft); margin-bottom:0; }
+.spec-tag .tag-specs{ padding:14px 20px 20px; }
+.spec-row{
+  display:flex; justify-content:space-between;
+  font-family:var(--mono); font-size:11.5px;
+  padding:6px 0;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--steel-700);
+}
+.spec-row:last-child{ border-bottom:none; }
+.spec-row b{ color:var(--ink); font-weight:600; }
+
+.tag-collection{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media (max-width:860px){ .tag-collection{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .tag-collection{ grid-template-columns:1fr; } }
+
+.tag-filter{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+.tag-filter button{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;
+  padding:9px 16px; border:1px solid var(--line); background:transparent;
+  cursor:pointer; border-radius:2px; color:var(--ink-soft);
+}
+.tag-filter button.active{ background:var(--ink); color:var(--porcelain); border-color:var(--ink); }
+
+/* ---------------- Stats strip ---------------- */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); }
+.stat{ padding:30px 24px; border-left:1px solid var(--line); }
+.stat:first-child{ border-left:none; }
+.stat .num{ font-family:var(--display); font-size:34px; font-weight:700; color:var(--silver); }
+.stat .lab{ font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--steel-700); margin-top:6px; }
+@media (max-width:760px){ .stats{ grid-template-columns:1fr 1fr; } .stat{ border-left:none; border-top:1px solid var(--line); } .stat:nth-child(2){ border-left:1px solid var(--line); } .stat:nth-child(4){ border-left:1px solid var(--line); } }
+
+/* ---------------- Process steps ---------------- */
+.process{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--line); }
+.process .step{ padding:28px 24px; border-left:1px solid var(--line); position:relative; }
+.process .step:first-child{ border-left:none; }
+.process .step .n{ font-family:var(--mono); font-size:12px; color:var(--silver-dark); margin-bottom:16px; }
+.process .step h4{ font-size:15.5px; margin-bottom:8px; }
+.process .step p{ font-size:13.5px; margin:0; }
+@media (max-width:860px){ .process{ grid-template-columns:1fr; } .process .step{ border-left:none; border-top:1px solid var(--line); } .process .step:first-child{ border-top:none; } }
+
+/* ---------------- Testimonial / quote block ---------------- */
+.quote-block{
+  border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-soft);
+  padding:56px 0;
+}
+.quote-block blockquote{
+  font-family:var(--display); font-size:clamp(20px,2.6vw,28px);
+  font-weight:500; line-height:1.35; margin:0 0 18px; max-width:26ch;
+}
+.quote-block cite{ font-family:var(--mono); font-size:12.5px; font-style:normal; color:var(--steel-700); }
+
+/* ---------------- Footer ---------------- */
+footer{ background:var(--ink); color:var(--steel-300); padding:64px 0 28px; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.1); }
+footer h4{ color:var(--porcelain); font-size:13px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px; }
+footer ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+footer a{ text-decoration:none; color:var(--steel-300); font-size:14px; }
+footer a:hover{ color:var(--porcelain); }
+footer .foot-logo{ font-family:var(--display); font-weight:700; font-size:19px; color:var(--porcelain); margin-bottom:10px; }
+footer .foot-desc{ font-size:14px; max-width:32ch; color:var(--steel-500); }
+.foot-bottom{ display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:12px; color:var(--steel-500); flex-wrap:wrap; gap:10px; }
+@media (max-width:860px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .footer-grid{ grid-template-columns:1fr; } }
+
+/* ---------------- Page header (interior pages) ---------------- */
+.page-head{ padding:56px 0 44px; border-bottom:1px solid var(--line); }
+.page-head .eyebrow{ margin-bottom:16px; }
+.page-head h1{ font-size:clamp(32px,4.6vw,48px); max-width:18ch; }
+.page-head .lede{ max-width:52ch; color:var(--ink-soft); font-size:16px; }
+
+/* ---------------- About page specifics ---------------- */
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+@media (max-width:860px){ .split{ grid-template-columns:1fr; gap:32px; } }
+.timeline{ border-left:2px solid var(--line); padding-left:24px; display:flex; flex-direction:column; gap:28px; }
+.timeline .t-item{ position:relative; }
+.timeline .t-item::before{ content:""; position:absolute; left:-29px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--silver-dark); }
+.timeline .yr{ font-family:var(--mono); font-size:12px; color:var(--silver-dark); }
+
+.cert-strip{ display:flex; gap:14px; flex-wrap:wrap; }
+.cert-pill{ border:1px solid var(--line); font-family:var(--mono); font-size:12px; padding:9px 14px; border-radius:2px; color:var(--ink-soft); }
+
+/* ---------------- Contact page ---------------- */
+.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+@media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
+.field{ margin-bottom:20px; }
+.field label{ display:block; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--steel-700); margin-bottom:8px; }
+.field input, .field select, .field textarea{
+  width:100%; border:1px solid var(--line); background:var(--steel-100);
+  padding:13px 14px; font-family:var(--body); font-size:14.5px; color:var(--ink);
+  border-radius:2px;
+}
+.field textarea{ min-height:120px; resize:vertical; }
+.contact-info .info-row{ display:flex; gap:16px; padding:18px 0; border-top:1px solid var(--line); }
+.contact-info .info-row:first-child{ border-top:none; }
+.contact-info .icon{ width:22px; height:22px; color:var(--silver-dark); flex-shrink:0; margin-top:2px; }
+.contact-info h4{ font-size:14.5px; margin-bottom:4px; }
+.contact-info p{ font-size:14px; margin:0; }
+
+/* Utility */
+.mt-0{ margin-top:0; }
+.center{ text-align:center; }
+
+
+/* --- single-file page router --- */
+.page { display:none; }
+.page.is-active { display:block; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#home" class="logo" data-link data-target="home"><span class="mark">KS</span>Kailash<span class="name-2">Steels</span></a>
+    <nav class="main-nav">
+      <a href="#home" data-link data-target="home">Home</a>
+      <a href="#about" data-link data-target="about">About</a>
+      <a href="#products" data-link data-target="products">Products</a>
+      <a href="#contact" data-link data-target="contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <div class="page" id="page-home" data-page="home">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Import &amp; Export — Stainless Steel Goods</div>
+      <h1>Steel goods, <em>shipped right</em>, from Mumbai to the world.</h1>
+      <p class="lede">Kailash Steels sources raw stainless steel and specialty components, and manufactures &amp; exports kitchen utensils, hotelware, and steel tableware to distributors, hotels, and retailers across the globe.</p>
+      <div class="hero-actions">
+        <a href="#products" data-link data-target="products" class="btn btn-primary">View product catalogue</a>
+        <a href="#contact" data-link data-target="contact" class="btn btn-ghost">Request a quotation</a>
+      </div>
+    </div>
+    <div class="manifest-card">
+      <div class="m-head"><span>Export Manifest</span><span>KS-0001</span></div>
+      <div class="manifest-row"><span>Origin</span><span>Mumbai, India</span></div>
+      <div class="manifest-row"><span>Categories</span><span>Utensils / Hotelware / Steel</span></div>
+      <div class="manifest-row"><span>Grades</span><span>SS201 · SS202 · SS304 · SS316</span></div>
+      <div class="manifest-row"><span>HSN</span><span>7323 · 7326 · 8215</span></div>
+      <div class="manifest-row"><span>Terms</span><span>FOB / CIF / EXW</span></div>
+      <div class="manifest-row"><span>MOQ</span><span>1 × 20ft container</span></div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="track">
+      <span>Shipping to — <b>UAE</b></span>
+      <span>Shipping to — <b>Saudi Arabia</b></span>
+      <span>Shipping to — <b>United Kingdom</b></span>
+      <span>Shipping to — <b>Kenya</b></span>
+      <span>Shipping to — <b>Nepal</b></span>
+      <span>Shipping to — <b>Sri Lanka</b></span>
+      <span>Shipping to — <b>Australia</b></span>
+      <span>Shipping to — <b>Nigeria</b></span>
+      <span>Shipping to — <b>UAE</b></span>
+      <span>Shipping to — <b>Saudi Arabia</b></span>
+      <span>Shipping to — <b>United Kingdom</b></span>
+      <span>Shipping to — <b>Kenya</b></span>
+      <span>Shipping to — <b>Nepal</b></span>
+      <span>Shipping to — <b>Sri Lanka</b></span>
+      <span>Shipping to — <b>Australia</b></span>
+      <span>Shipping to — <b>Nigeria</b></span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Three product lines, one supply chain.</h2>
+      <p class="sub">From raw coil to finished hotelware, every category runs through the same quality and export desk.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell cat-card">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 22c0-8 7-14 16-14s16 6 16 14"/><path d="M6 22h36"/><path d="M10 22c0 8 6 14 14 14s14-6 14-14"/><path d="M4 22h4M40 22h4"/></svg>
+        <div class="code">CAT · 01 — UTN</div>
+        <h3>Kitchen Utensils</h3>
+        <p>Kadhai, tawa, patila, pressure cookers, milk pots, and cookware sets in 201/202/304 grade steel.</p>
+        <a href="#products" data-link data-target="products" class="tag-link">See utensil range →</a>
+      </div>
+      <div class="cell cat-card">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="14" width="36" height="8" rx="1"/><path d="M10 22v10a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V22"/><path d="M14 14V10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4"/></svg>
+        <div class="code">CAT · 02 — HTL</div>
+        <h3>Hotelware &amp; Buffet</h3>
+        <p>Chafing dishes, service trays, gueridon trolleys, buffet counters, and banquet serveware.</p>
+        <a href="#products" data-link data-target="products" class="tag-link">See hotelware range →</a>
+      </div>
+      <div class="cell cat-card">
+        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="17"/><path d="M24 7v34M7 24h34"/></svg>
+        <div class="code">CAT · 03 — RAW</div>
+        <h3>Steel Sheets &amp; Coils</h3>
+        <p>Cold-rolled and hot-rolled stainless coil, sheet, and circle stock imported for domestic fabrication.</p>
+        <a href="#products" data-link data-target="products" class="tag-link">See steel stock range →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built for buyers who order by the container.</h2>
+      <p class="sub">Every shipment carries mill test certificates, consistent gauge tolerance, and export documentation handled in-house.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">3</div><div class="lab">Product Divisions</div></div>
+      <div class="stat"><div class="num">8+</div><div class="lab">Export Markets</div></div>
+      <div class="stat"><div class="num">201–316</div><div class="lab">Steel Grades Stocked</div></div>
+      <div class="stat"><div class="num">FOB/CIF</div><div class="lab">Flexible Incoterms</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>From enquiry to container.</h2>
+      <p class="sub">A straightforward process for first-time importers and standing repeat orders alike.</p>
+    </div>
+    <div class="process">
+      <div class="step">
+        <div class="n">01</div>
+        <h4>Enquiry &amp; sampling</h4>
+        <p>Share your product list or drawing — we confirm grade, gauge, and finish, and dispatch samples on request.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h4>Costing &amp; contract</h4>
+        <p>A formal proforma invoice is issued with agreed Incoterms, packaging, and lead time.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h4>Production &amp; QC</h4>
+        <p>In-line and pre-shipment inspection, with mill test certificates provided for every batch.</p>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <h4>Shipping &amp; documentation</h4>
+        <p>Export packing, customs clearance, and shipping documents handled through to your port of entry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-steel section-tight">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>A sample of the manifest.</h2>
+      <p class="sub">Every listing carries the same detail you'd expect on a shipping tag — grade, gauge, and code.</p>
+    </div>
+    <div class="tag-collection">
+      <div class="spec-tag">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 20c0-7 6-13 14-13s14 6 14 13"/><ellipse cx="24" cy="20" rx="18" ry="4"/><path d="M8 20l3 12a3 3 0 0 0 3 2h20a3 3 0 0 0 3-2l3-12"/></svg>
+          <h3>Deep Kadhai</h3>
+          <p class="desc">Induction-friendly, encapsulated base</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-014</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS202 body / SS304 lid</b></div>
+          <div class="spec-row"><span>Sizes</span><b>200mm – 400mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+      <div class="spec-tag">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="17" width="38" height="6" rx="1"/><path d="M9 23v4a2 2 0 0 0 2 2h26a2 2 0 0 0 2-2v-4"/><path d="M14 17c0-5 4-9 10-9s10 4 10 9"/></svg>
+          <h3>Chafing Dish — Round</h3>
+          <p class="desc">Full size, roll-top lid, fuel holder</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-027</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304, mirror finish</b></div>
+          <div class="spec-row"><span>Capacity</span><b>7–9 Litres</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.94</b></div>
+        </div>
+      </div>
+      <div class="spec-tag">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M6 18h36M18 6v36"/></svg>
+          <h3>Cold Rolled Coil</h3>
+          <p class="desc">Slit to width, mill-certified</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-RAW-003</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304 / SS316</b></div>
+          <div class="spec-row"><span>Gauge</span><b>0.3mm – 3mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7219.90</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-block">
+  <div class="wrap">
+    <blockquote>"We reordered from Kailash Steels three times last year — the gauge never varied and the documentation was always clean at customs."</blockquote>
+    <cite>— Procurement lead, hospitality distributor (representative feedback)</cite>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="grid-2">
+      <div class="cell">
+        <h3 class="mt-0">Have a product list ready?</h3>
+        <p>Send your requirement — item, grade, quantity — and we'll return a proforma invoice within two working days.</p>
+        <a href="#contact" data-link data-target="contact" class="btn btn-silver">Request a quotation</a>
+      </div>
+      <div class="cell">
+        <h3 class="mt-0">Sourcing raw steel?</h3>
+        <p>We also supply coil, sheet, and circle stock in 201/202/304/316 for your own fabrication line.</p>
+        <a href="#products" data-link data-target="products" class="btn btn-ghost">Browse raw material</a>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+
+  <div class="page" id="page-about" data-page="about">
+<section class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">About Kailash Steels</div>
+    <h1>A steel trading desk built on repeat orders, not one-off deals.</h1>
+    <p class="lede">We work both sides of the supply chain — importing raw stainless steel and specialty components, and exporting finished utensils and hotelware — so quality control happens under one roof, not across three vendors.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <h2>What we do</h2>
+      <p>Kailash Steels is an import-export house based in Mumbai, working across three linked product lines: kitchen utensils, hotel and catering hardware, and raw stainless steel sheet and coil.</p>
+      <p>On the import side, we bring in stainless steel coil, sheet, and specialty fittings that feed our own finishing lines and those of partner fabricators. On the export side, we ship finished kitchenware, tableware, and buffet equipment to distributors, hospitality suppliers, and retail chains abroad.</p>
+      <p>Every order — whether it's a single container of chafing dishes or a bulk coil shipment — goes through the same costing, quality, and documentation desk, which is what keeps gauge and finish consistent from one shipment to the next.</p>
+    </div>
+    <div class="manifest-card">
+      <div class="m-head"><span>Company Profile</span><span>KS</span></div>
+      <div class="manifest-row"><span>Based in</span><span>Mumbai, India</span></div>
+      <div class="manifest-row"><span>Operations</span><span>Import + Export</span></div>
+      <div class="manifest-row"><span>Product lines</span><span>3</span></div>
+      <div class="manifest-row"><span>Steel grades</span><span>201 / 202 / 304 / 316</span></div>
+      <div class="manifest-row"><span>Shipping terms</span><span>EXW · FOB · CIF</span></div>
+      <div class="manifest-row"><span>Order unit</span><span>Container / pallet / carton</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-steel">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How we work</h2>
+      <p class="sub">Four principles that shape every quotation we send.</p>
+    </div>
+    <div class="grid-2">
+      <div class="cell">
+        <h3 class="mt-0">Grade transparency</h3>
+        <p>Every item is quoted against a named steel grade (201, 202, 304, or 316) — never a vague "stainless steel" line item — so buyers know exactly what they're landing.</p>
+      </div>
+      <div class="cell">
+        <h3 class="mt-0">Consistent gauge</h3>
+        <p>Thickness tolerance is checked at the raw material stage and again before packing, so a reorder six months later matches the original sample.</p>
+      </div>
+      <div class="cell">
+        <h3 class="mt-0">Documentation-first exports</h3>
+        <p>Mill test certificates, packing lists, and commercial invoices are prepared before the container is booked, not after.</p>
+      </div>
+      <div class="cell">
+        <h3 class="mt-0">Direct sourcing</h3>
+        <p>Raw material is imported directly rather than through multiple intermediaries, which keeps quoted prices closer to mill rates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Certifications &amp; compliance</h2>
+      <p class="sub">Standard paperwork we prepare or hold for cross-border shipments.</p>
+    </div>
+    <div class="cert-strip">
+      <div class="cert-pill">IEC — Import Export Code</div>
+      <div class="cert-pill">Mill Test Certificates (MTC)</div>
+      <div class="cert-pill">BIS-compliant product lines</div>
+      <div class="cert-pill">Food-grade SS304/316 on request</div>
+      <div class="cert-pill">Fumigated export packaging</div>
+    </div>
+  </div>
+</section>
+  </div>
+
+  <div class="page" id="page-products" data-page="products">
+<section class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Full Catalogue</div>
+    <h1>Utensils, hotelware, and raw steel — by the piece or by the container.</h1>
+    <p class="lede">Every listing below carries an internal code, steel grade, and HSN reference. Photos, full spec sheets, and pricing are shared once a category is shortlisted.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="tag-filter">
+      <button class="active" data-filter="all">All products</button>
+      <button data-filter="utensils">Kitchen utensils</button>
+      <button data-filter="hotelware">Hotelware &amp; buffet</button>
+      <button data-filter="raw">Steel sheets &amp; coils</button>
+    </div>
+
+    <div class="tag-collection">
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 20c0-7 6-13 14-13s14 6 14 13"/><ellipse cx="24" cy="20" rx="18" ry="4"/><path d="M8 20l3 12a3 3 0 0 0 3 2h20a3 3 0 0 0 3-2l3-12"/></svg>
+          <h3>Deep Kadhai</h3>
+          <p class="desc">Induction-friendly, encapsulated base</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-014</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS202 / SS304 lid</b></div>
+          <div class="spec-row"><span>Sizes</span><b>200mm – 400mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="22" cy="24" r="15"/><path d="M37 20l8-4"/><path d="M22 9v4"/></svg>
+          <h3>Flat Tawa</h3>
+          <p class="desc">Heavy-gauge, riveted handle</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-021</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS202</b></div>
+          <div class="spec-row"><span>Sizes</span><b>230mm – 300mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="12" width="28" height="24" rx="3"/><path d="M14 12V9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3"/><circle cx="24" cy="24" r="4"/></svg>
+          <h3>Pressure Cooker</h3>
+          <p class="desc">Safety-valve lid, mirror body</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-032</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Capacity</span><b>2L – 10L</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8v14a10 10 0 0 0 20 0V8"/><path d="M14 8h6M28 8h6M20 8v10M28 8v10"/><path d="M24 32v8"/></svg>
+          <h3>Serving Spoon Set</h3>
+          <p class="desc">6-piece, mirror-polished handles</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-045</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Set size</span><b>6 / 12 pcs</b></div>
+          <div class="spec-row"><span>HSN</span><b>8215.20</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22a12 8 0 0 0 24 0"/><path d="M12 22a12 8 0 0 1 24 0"/><path d="M12 22v6a12 8 0 0 0 24 0v-6"/></svg>
+          <h3>Milk Pot / Patila</h3>
+          <p class="desc">Wide-mouth, stackable design</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-018</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS201 / SS202</b></div>
+          <div class="spec-row"><span>Sizes</span><b>1L – 15L</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="utensils">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="10" width="32" height="10" rx="2"/><rect x="8" y="24" width="32" height="14" rx="2"/><path d="M14 24v14M20 24v14M26 24v14M32 24v14"/></svg>
+          <h3>Storage Container Set</h3>
+          <p class="desc">Airtight lids, nesting sizes</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-UTN-051</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Set size</span><b>3 / 5 / 7 pcs</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.93</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="hotelware">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="17" width="38" height="6" rx="1"/><path d="M9 23v4a2 2 0 0 0 2 2h26a2 2 0 0 0 2-2v-4"/><path d="M14 17c0-5 4-9 10-9s10 4 10 9"/></svg>
+          <h3>Chafing Dish — Round</h3>
+          <p class="desc">Full size, roll-top lid, fuel holder</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-027</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304, mirror finish</b></div>
+          <div class="spec-row"><span>Capacity</span><b>7–9 Litres</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.94</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="hotelware">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="20" width="40" height="4" rx="1"/><path d="M8 24v8a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2v-8"/><path d="M4 20l4-8h32l4 8"/></svg>
+          <h3>Rectangular Service Tray</h3>
+          <p class="desc">Reinforced rim, non-slip base option</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-033</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Sizes</span><b>300 × 450mm – 500 × 700mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.94</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="hotelware">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="6" width="28" height="20" rx="2"/><path d="M14 26v6M34 26v6M12 38h24M14 32h20"/></svg>
+          <h3>Buffet Service Trolley</h3>
+          <p class="desc">Multi-tier, locking castor wheels</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-041</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304 top / SS202 frame</b></div>
+          <div class="spec-row"><span>Tiers</span><b>2 / 3 tier</b></div>
+          <div class="spec-row"><span>HSN</span><b>7326.90</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="hotelware">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 6h20l-4 14v18a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V20L14 6z"/><path d="M13 12h22"/></svg>
+          <h3>Gastronorm Pan Set</h3>
+          <p class="desc">GN 1/1, 1/2, 1/3 with lids</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-052</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Depths</span><b>65mm / 100mm / 150mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7323.94</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="hotelware">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="8" width="36" height="26" rx="2"/><path d="M6 16h36M14 8v26M24 16v18M34 16v18"/></svg>
+          <h3>Bar Counter Fittings</h3>
+          <p class="desc">Ice wells, speed rails, drain boards</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-HTL-058</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304</b></div>
+          <div class="spec-row"><span>Build</span><b>Custom to counter size</b></div>
+          <div class="spec-row"><span>HSN</span><b>7326.90</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="raw">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M6 18h36M18 6v36"/></svg>
+          <h3>Cold Rolled Coil</h3>
+          <p class="desc">Slit to width, mill-certified</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-RAW-003</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304 / SS316</b></div>
+          <div class="spec-row"><span>Gauge</span><b>0.3mm – 3mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7219.90</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="raw">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="6"/></svg>
+          <h3>Steel Circle Blanks</h3>
+          <p class="desc">Pre-cut for utensil deep-drawing</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-RAW-009</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS201 / SS202 / SS304</b></div>
+          <div class="spec-row"><span>Diameter</span><b>100mm – 600mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7219.90</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="raw">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="20" width="36" height="8" rx="4"/><circle cx="10" cy="24" r="1.4" fill="currentColor" stroke="none"/><circle cx="38" cy="24" r="1.4" fill="currentColor" stroke="none"/></svg>
+          <h3>Pipes &amp; Tubes</h3>
+          <p class="desc">Round and square section, welded/seamless</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-RAW-015</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304 / SS316</b></div>
+          <div class="spec-row"><span>Sizes</span><b>1/2" – 4" OD</b></div>
+          <div class="spec-row"><span>HSN</span><b>7306.40</b></div>
+        </div>
+      </div>
+
+      <div class="spec-tag" data-category="raw">
+        <div class="tag-top">
+          <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="32" height="32" rx="2"/><path d="M8 24h32M24 8v32"/></svg>
+          <h3>Sheet &amp; Plate Stock</h3>
+          <p class="desc">2B, BA, and No.4 (brushed) finish</p>
+        </div>
+        <div class="tag-specs">
+          <div class="spec-row"><span>Code</span><b>KS-RAW-021</b></div>
+          <div class="spec-row"><span>Grade</span><b>SS304 / SS316</b></div>
+          <div class="spec-row"><span>Thickness</span><b>0.5mm – 6mm</b></div>
+          <div class="spec-row"><span>HSN</span><b>7220.20</b></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-ink section-tight">
+  <div class="wrap grid-2">
+    <div class="cell">
+      <h3 class="mt-0">Don't see what you need?</h3>
+      <p>We regularly quote custom items against a drawing, sample, or reference photo — sizing and grade are matched to your target market's standards.</p>
+    </div>
+    <div class="cell">
+      <h3 class="mt-0">Ready to order?</h3>
+      <a href="#contact" data-link data-target="contact" class="btn btn-silver">Send your enquiry</a>
+    </div>
+  </div>
+</section>
+  </div>
+
+  <div class="page" id="page-contact" data-page="contact">
+<section class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Tell us what you're sourcing.</h1>
+    <p class="lede">Share the product, grade, and quantity, and we'll come back with a proforma invoice — usually within two working days.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <form class="enquiry-form">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="company">Company name</label>
+        <input type="text" id="company" name="company">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country">
+      </div>
+      <div class="field">
+        <label for="category">Product category</label>
+        <select id="category" name="category">
+          <option>Kitchen utensils</option>
+          <option>Hotelware &amp; buffet equipment</option>
+          <option>Steel sheets, coils &amp; raw stock</option>
+          <option>Custom / mixed order</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Requirement details</label>
+        <textarea id="message" name="message" placeholder="Item, grade, quantity, and target delivery port" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send enquiry</button>
+      <p class="form-note" style="margin-top:14px; font-size:13.5px;"></p>
+    </form>
+
+    <div class="contact-info">
+      <div class="info-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-7.4 7-12.6A7 7 0 0 0 5 9.4C5 14.6 12 22 12 22z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <div>
+          <h4>Office</h4>
+          <p>Kailash Steels, Mumbai, Maharashtra, India</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+        <div>
+          <h4>Email</h4>
+          <p>export@kailashsteels.com</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4c0 9 7 16 16 16l2-5-6-2-2 2c-2-1-4-3-5-5l2-2-2-6z"/></svg>
+        <div>
+          <h4>Phone / WhatsApp</h4>
+          <p>+91 00000 00000</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+        <div>
+          <h4>Enquiry response time</h4>
+          <p>Proforma invoice within 2 working days</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        <div>
+          <h4>Export terms accepted</h4>
+          <p>EXW · FOB · CIF — negotiable by order size</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="foot-logo">Kailash Steels</div>
+        <p class="foot-desc">Importers &amp; exporters of stainless steel utensils, hotelware, and raw steel stock, based in Mumbai, India.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about" data-link data-target="about">About us</a></li>
+          <li><a href="#products" data-link data-target="products">Products</a></li>
+          <li><a href="#contact" data-link data-target="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products" data-link data-target="products">Kitchen utensils</a></li>
+          <li><a href="#products" data-link data-target="products">Hotelware &amp; buffet</a></li>
+          <li><a href="#products" data-link data-target="products">Steel sheets &amp; coils</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Mumbai, Maharashtra, India</li>
+          <li>export@kailashsteels.com</li>
+          <li>+91 00000 00000</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Kailash Steels. All rights reserved.</span>
+      <span>Placeholder content — replace with final company details.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var pages = document.querySelectorAll('.page');
+  var links = document.querySelectorAll('[data-link]');
+  var navEl = document.querySelector('.main-nav');
+
+  function showPage(name) {
+    if (!document.getElementById('page-' + name)) name = 'home';
+    pages.forEach(function (p) {
+      p.classList.toggle('is-active', p.dataset.page === name);
+    });
+    links.forEach(function (l) {
+      l.classList.toggle('active', l.dataset.target === name);
+    });
+    window.scrollTo(0, 0);
+  }
+
+  function routeFromHash() {
+    var name = (window.location.hash || '#home').replace('#', '') || 'home';
+    showPage(name);
+  }
+
+  links.forEach(function (l) {
+    l.addEventListener('click', function () {
+      if (navEl) navEl.classList.remove('open');
+    });
+  });
+
+  window.addEventListener('hashchange', routeFromHash);
+  routeFromHash();
+
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  if (toggle && navEl) {
+    toggle.addEventListener('click', function () {
+      navEl.classList.toggle('open');
+    });
+  }
+
+  // Product category filter
+  var filterButtons = document.querySelectorAll('.tag-filter button');
+  var cards = document.querySelectorAll('[data-category]');
+  if (filterButtons.length) {
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var cat = btn.getAttribute('data-filter');
+        cards.forEach(function (card) {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Contact form (static demo — no backend wired up)
+  var form = document.querySelector('.enquiry-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var note = document.querySelector('.form-note');
+      if (note) {
+        note.textContent = 'Thanks — your enquiry details are ready. Connect a form backend (e.g. Formspree or your CRM) to send this live.';
+        note.style.color = '#566067';
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
